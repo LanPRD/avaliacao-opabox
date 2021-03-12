@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/interlace.css">
+
+    <title>Interlace | OpaBox</title>
+</head>
+
+<body>
+    <h1>OpaBox - Avaliação</h1>
+
+    <form name="interlace" id="form">
+        <fieldset>
+            <legend>
+                <a href="/">< Voltar</a>
+                <h2>Exercício B</h2>
+            </legend>
+
+            <div class="fields">
+                <div class="intervaloA">
+                    <label for="intervaloA">Intervalo A</label>
+                    <textarea name="intervaloA" id="intervaloTA" placeholder="Escreva o primeiro intervalo" required></textarea>
+                </div>
+
+                <div class="intervaloB">
+                    <label for="intervaloB">Intervalo B</label>
+                    <textarea name="intervaloB" id="intervaloTB" placeholder="Escreva o segundo intervalo" required></textarea>
+                </div>
+            </div>
+
+            <div class="div-button">
+                <button onclick="validate(event)">Verificar</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <p class="{{ type }}">{{ message }}</p>
+
+    <script src="/scripts/interlace.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/ordenarLista.css">
+
+    <title>Lista | OpaBox</title>
+</head>
+
+<body>
+    <h1>OpaBox - Avaliação</h1>
+
+    <form action="/ordenarLista" name="ordenarLista" id="form" method="post">
+        <fieldset>
+            <legend>
+                <a href="/">< Voltar</a>
+                <h2>Exercício A</h2>
+            </legend>
+
+            <div class="fields">
+                <div class="salaN">
+                    <label for="salaN">Sala N</label>
+                    <textarea name="salaN" id="salaN" placeholder="Escreva os números da sala N" required></textarea>
+                </div>
+
+                <div class="salaS">
+                    <label for="salaS">Sala S</label>
+                    <textarea name="salaS" id="salaS" placeholder="Escreva os caracteres da sala S" required></textarea>
+                </div>
+            </div>
+
+            <div class="div-button">
+                <button onclick="validate(event)">Verificar</button>
+            </div>
+        </fieldset>
+    </form>
+
+    {{#if sortSalaN}}
+        <p class="responseSalaN">Sala N = {{ sortSalaN }}</p>
+    {{/if}}
+
+    {{#if sortSalaS}}
+        <p class="responseSalaS">Sala S = {{ sortSalaS }}</p>
+    {{/if}}
+
+    <script src="/scripts/ordenarLista.js"></script>
+
+</body>
+
+</html>
